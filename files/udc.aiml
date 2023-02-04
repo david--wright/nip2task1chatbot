@@ -23,18 +23,17 @@
         <pattern>*</pattern>
         <that> How would you rate your skills in coding </that>
         <think><set name="temp"><star /></set></think>
-        <think><set name=coding>
+        <think><set name="coding">
             <condition name="temp">
                 <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="coding"/></map></map></li>
                 <li value="2"><map><name>predecessor</name><get name="coding"/></map></li>
-                <li value="3"><get name="coding"></li>
+                <li value="3"><get name="coding"/></li>
                 <li value="4"><map><name>successor</name><get name="coding"/></map></li>
                 <li value="5"><map><name>successor</name><map><name>successor</name><get name="coding"/></map></map></li>
-                <li><think><set name="temp"><0></set></think><get name="coding"></li>
             </condition>
         </set></think>    
 
-        <template>Coding is <get name="coding"> </split> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
+        <template>Coding is <get name="coding"/> <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
     </category>
 
     <category>
