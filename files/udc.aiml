@@ -36,4 +36,17 @@
         <that> How would you rate your ability with math </that>
         <template>Last question about your skills. Using the same scale five being expert and 1 being beginner. How would you rate your attention to detail?</template>
     </category>
+    <category>
+        <pattern>*</pattern>
+        <that> How would you rate your attention to detail </that>
+        <template>Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completly facinates you. How would you rate attention to detail?</template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>*</pattern>
+        <template><response index="1" /></template>
+    </category>
 </aiml>
