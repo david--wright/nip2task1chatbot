@@ -59,17 +59,50 @@ Coding is <get name="coding"/> <split/> Ok and on the same scale five being expe
      <category>
         <pattern>*</pattern>
         <that> How would you rate your interpersonal skills </that>
-        <template>Great! 2 more questions on your skills. Using the same scale five being expert and 1 being beginner. How would you rate your ability with math?</template>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="personal">
+            <condition var="temp">
+                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="personal"/></map></map></li>
+                <li value="2"><map><name>predecessor</name><get name="personal"/></map></li>
+                <li value="3"><get name="personal"/></li>
+                <li value="4"><map><name>successor</name><get name="personal"/></map></li>
+                <li value="5"><map><name>successor</name><map><name>successor</name><get name="personal"/></map></map></li>
+            </condition>
+        </set></think>    
+personal is <get name="personal"/> <split/> Great! 2 more questions on your skills. Using the same scale five being expert and 1 being beginner. How would you rate your ability with math?</template>
     </category>
     <category>
         <pattern>*</pattern>
         <that> How would you rate your ability with math </that>
-        <template>Last question about your skills. Using the same scale five being expert and 1 being beginner. How would you rate your attention to detail?</template>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="math">
+            <condition var="temp">
+                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="math"/></map></map></li>
+                <li value="2"><map><name>predecessor</name><get name="math"/></map></li>
+                <li value="3"><get name="math"/></li>
+                <li value="4"><map><name>successor</name><get name="math"/></map></li>
+                <li value="5"><map><name>successor</name><map><name>successor</name><get name="math"/></map></map></li>
+            </condition>
+        </set></think>    
+math is <get name="math"/> <split/> Last question about your skills. Using the same scale five being expert and 1 being beginner. How would you rate your attention to detail?</template>
     </category>
     <category>
         <pattern>*</pattern>
         <that> How would you rate your attention to detail </that>
-        <template>Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completly facinates you. How would you rate attention to detail?</template>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="detail">
+            <condition var="temp">
+                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="detail"/></map></map></li>
+                <li value="2"><map><name>predecessor</name><get name="detail"/></map></li>
+                <li value="3"><get name="detail"/></li>
+                <li value="4"><map><name>successor</name><get name="detail"/></map></li>
+                <li value="5"><map><name>successor</name><map><name>successor</name><get name="detail"/></map></map></li>
+            </condition>
+        </set></think>    
+detail is <get name="detail"/> <split/> Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completly facinates you. How would you rate programming?</template>
     </category>
 
     <category>
