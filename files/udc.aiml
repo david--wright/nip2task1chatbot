@@ -42,7 +42,18 @@ Coding is <get name="coding"/> <split/> Ok and on the same scale five being expe
     <category>
         <pattern>*</pattern>
         <that> How would you rate your skills in Operating Systems Maintainance </that>
-        <template>Using the same scale five being expert and 1 being beginner. How would you rate your interpersonal skills?</template>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="os">
+            <condition var="temp">
+                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="os"/></map></map></li>
+                <li value="2"><map><name>predecessor</name><get name="os"/></map></li>
+                <li value="3"><get name="os"/></li>
+                <li value="4"><map><name>successor</name><get name="os"/></map></li>
+                <li value="5"><map><name>successor</name><map><name>successor</name><get name="os"/></map></map></li>
+            </condition>
+        </set></think>    
+        os is <get name="os"/> <split/> Using the same scale five being expert and 1 being beginner. How would you rate your interpersonal skills?</template>
     </category>
  
      <category>
