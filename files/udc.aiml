@@ -2,12 +2,15 @@
 <aiml version="2.0">
     <category>
         <pattern>Hello</pattern>
-        <think><set name="coding">0</set></think>
-        <think><set name="os">0</set></think>
-        <think><set name="personal">0</set></think>
-        <think><set name="math">0</set></think>
-        <think><set name="detail">0</set></think>
-        <template>Hi! I'm Career Bot. My job is to help you find likely careers based on your skills and preferences. Can I ask you a few questions?</template>
+        <template>
+        <think>
+            <set name="coding">0</set>
+            <set name="os">0</set>
+            <set name="personal">0</set>
+            <set name="math">0</set>
+            <set name="detail">0</set>
+        </think>
+Coding is <get name="coding"/> <split/>Hi! I'm Career Bot. My job is to help you find likely careers based on your skills and preferences. Can I ask you a few questions?</template>
     </category>
     
     <category><pattern>HI</pattern><template><srai>HELLO</srai></template></category>
@@ -22,9 +25,10 @@
     <category>
         <pattern>*</pattern>
         <that> How would you rate your skills in coding </that>
-        <think><set name="temp"><star /></set></think>
+        <template>
+        <think><set var="temp"><star /></set></think>
         <think><set name="coding">
-            <condition name="temp">
+            <condition var="temp">
                 <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="coding"/></map></map></li>
                 <li value="2"><map><name>predecessor</name><get name="coding"/></map></li>
                 <li value="3"><get name="coding"/></li>
@@ -32,8 +36,7 @@
                 <li value="5"><map><name>successor</name><map><name>successor</name><get name="coding"/></map></map></li>
             </condition>
         </set></think>    
-
-        <template>Coding is <get name="coding"/> <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
+Coding is <get name="coding"/> <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
     </category>
 
     <category>
