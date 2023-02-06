@@ -4,11 +4,11 @@
         <pattern>Hello</pattern>
         <template>
         <think>
-            <set name="coding">0</set>
-            <set name="os">0</set>
-            <set name="personal">0</set>
-            <set name="math">0</set>
-            <set name="detail">0</set>
+            <set name="SE">50</set>
+            <set name="CE">50</set>
+            <set name="AIML">50</set>
+            <set name="DS">50</set>
+            <set name="SA">50</set>
         </think>
 Coding is <get name="coding"/> <split/>Hi! I'm Career Bot. My job is to help you find likely careers based on your skills and preferences. Can I ask you a few questions?</template>
     </category>
@@ -27,16 +27,113 @@ Coding is <get name="coding"/> <split/>Hi! I'm Career Bot. My job is to help you
         <that> How would you rate your skills in coding </that>
         <template>
         <think><set var="temp"><star /></set></think>
-        <think><set name="coding">
+        <think>
             <condition var="temp">
-                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="coding"/></map></map></li>
-                <li value="2"><map><name>predecessor</name><get name="coding"/></map></li>
-                <li value="3"><get name="coding"/></li>
-                <li value="4"><map><name>successor</name><get name="coding"/></map></li>
-                <li value="5"><map><name>successor</name><map><name>successor</name><get name="coding"/></map></map></li>
+                <li value="1">
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>                       
+                </li>
+                <li value="2">
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="AIML"/>
+                        </map>
+                    </set>
+                    <set name="CE">
+                        <map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                </li>
+                <li value="3"><set name="SE"><get name="SE"/></set></li>
+                <li value="4">
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="AIML"/>
+                        </map>
+                    </set>
+                    <set name="CE">
+                        <map><name>successor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                </li>
+                <li value="5">
+                  <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>                  
+                </li>
             </condition>
         </set></think>    
-Coding is <get name="coding"/> <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
+     <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
     </category>
 
     <category>
