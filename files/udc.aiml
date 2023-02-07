@@ -207,11 +207,79 @@ SA - <get name="SA"/><br/>
         <think><set var="temp"><star /></set></think>
         <think><set name="personal">
             <condition var="temp">
-                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="personal"/></map></map></li>
-                <li value="2"><map><name>predecessor</name><get name="personal"/></map></li>
-                <li value="3"><get name="personal"/></li>
-                <li value="4"><map><name>successor</name><get name="personal"/></map></li>
-                <li value="5"><map><name>successor</name><map><name>successor</name><get name="personal"/></map></map></li>
+                <li value="1">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="2">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SA"/>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="3"></li>
+                <li value="4">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SA"/>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>successor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>successor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="5">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>                                                               
+                    </set>                
+                </li>
             </condition>
         </set></think>    
 personal is <get name="personal"/> <split/> Great! 2 more questions on your skills. Using the same scale five being expert and 1 being beginner. How would you rate your ability with math?</template>
@@ -223,7 +291,7 @@ personal is <get name="personal"/> <split/> Great! 2 more questions on your skil
         <think><set var="temp"><star /></set></think>
         <think><set name="math">
             <condition var="temp">
-                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="math"/></map></map></li>
+                <li value="1"><map><name>successor</name><map><name>successor</name><get name="math"/></map></map></li>
                 <li value="2"><map><name>predecessor</name><get name="math"/></map></li>
                 <li value="3"><get name="math"/></li>
                 <li value="4"><map><name>successor</name><get name="math"/></map></li>
