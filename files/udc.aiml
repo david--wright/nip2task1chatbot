@@ -143,11 +143,58 @@ SA - <get name="SA"/><br/>
         <think><set var="temp"><star /></set></think>
         <think><set name="os">
             <condition var="temp">
-                <li value="1"><map><name>predecessor</name><map><name>predecessor</name><get name="os"/></map></map></li>
-                <li value="2"><map><name>predecessor</name><get name="os"/></map></li>
-                <li value="3"><get name="os"/></li>
-                <li value="4"><map><name>successor</name><get name="os"/></map></li>
-                <li value="5"><map><name>successor</name><map><name>successor</name><get name="os"/></map></map></li>
+                <li value="1">
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="CE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>                       
+                </li>
+                <li value="2">
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>predecessor</name>
+                        <get name="SA"/>
+                        </map>
+                    </set>                   
+                </li>
+                <li value="3"></li>
+                <li value="4">
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>successor</name>
+                        <get name="SA"/>
+                        </map>
+                    </set>  </li>
+                <li value="5">
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="CE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>                    
+                </li>
             </condition>
         </set></think>    
         os is <get name="os"/> <split/> Using the same scale five being expert and 1 being beginner. How would you rate your interpersonal skills?</template>
