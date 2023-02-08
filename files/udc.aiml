@@ -1019,7 +1019,8 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Great here are your results. Higher numbers are a better match for your skills and preferances: Software Engineer - <get name="SE"/><br/>
+Great here are your results. Higher numbers are a better match for your skills and preferances:<br/>
+Software Engineer - <get name="SE"/><br/>
 Cloud Engineer - <get name="CE"/><br/>
 Artifical Intellegince Engineer - <get name="AIML"/><br/>
 Data Scientist - <get name="DS"/><br/>
