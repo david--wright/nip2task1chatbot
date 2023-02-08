@@ -10,11 +10,15 @@
             <set name="DS">50</set>
             <set name="SA">50</set>
         </think>
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
 <split/>Hi! I'm Career Bot. My job is to help you find likely careers based on your skills and preferences. Can I ask you a few questions?</template>
     </category>
     
@@ -133,11 +137,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
      <split/> Ok and on the same scale five being expert and 1 being beginner. How would you rate your skills in Operating Systems Maintainance?</template>
     </category>
 
@@ -202,11 +210,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
  <split/> Using the same scale five being expert and 1 being beginner. How would you rate your interpersonal skills?</template>
     </category>
  
@@ -292,11 +304,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
 <split/> Great! 2 more questions on your skills. Using the same scale five being expert and 1 being beginner. How would you rate your ability with math?</template>
     </category>
     <category>
@@ -385,11 +401,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
 <split/> Last question about your skills. Using the same scale five being expert and 1 being beginner. How would you rate your attention to detail?</template>
     </category>
     <category>
@@ -518,11 +538,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
  <split/> Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate programming?</template>
     </category>
 
@@ -632,11 +656,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
      <split/> Ok and on the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate Operating Systems Maintainance?</template>
     </category>
 
@@ -701,11 +729,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
  <split/> Using the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate interacting with others?</template>
     </category>
  
@@ -793,11 +825,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
 <split/> Great! 2 more questions on your preferences. 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate doing math?</template>
     </category>
     <category>
@@ -886,11 +922,15 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
+        <condition name="debug">
+            <li value="true">
+                Current rankings are: SE - <get name="SE"/><br/>
+                CE - <get name="CE"/><br/>
+                AIML - <get name="AIML"/><br/>
+                DS - <get name="DS"/><br/>
+                SA - <get name="SA"/><br/>
+            </li>
+        </condition>
 <split/> Last question. Using the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate paying attention to details?</template>
     </category>
     <category>
@@ -1028,7 +1068,12 @@ Information Security Analyst - <get name="SA"/><br/>
  <split/> Which of these careers would you like more information on?</template>
     </category>
 
-
+    <category>
+        <pattern>debug *</pattern>
+        <think><set name="debug"><star/></set></think>
+        <template>Debug set to <star/></template>
+    </category>
+</aiml>
 
     <category>
         <pattern>*</pattern>
