@@ -1019,12 +1019,12 @@ SA - <get name="SA"/><br/>
                 </li>
             </condition>
         </set></think>    
-Current rankings are: SE - <get name="SE"/><br/>
-CE - <get name="CE"/><br/>
-AIML - <get name="AIML"/><br/>
-DS - <get name="DS"/><br/>
-SA - <get name="SA"/><br/>
- <split/> Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completly facinates you. How would you rate programming?</template>
+Great here are your results. Higher numbers are a better match for your skills and preferances: Software Engineer - <get name="SE"/><br/>
+Cloud Engineer - <get name="CE"/><br/>
+Artifical Intellegince Engineer - <get name="AIML"/><br/>
+Data Scientist - <get name="DS"/><br/>
+Information Security Analyst - <get name="SA"/><br/>
+ <split/> Which of these careers would you like more information on?</template>
     </category>
 
 
