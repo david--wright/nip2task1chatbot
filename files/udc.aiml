@@ -234,7 +234,6 @@ SA - <get name="SA"/><br/>
                         <map><name>predecessor</name><map><name>predecessor</name>
                         <get name="CE"/>
                         </map></map>
-                    </set>                                                               
                     </set>
                 </li>
                 <li value="2">
@@ -735,7 +734,6 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map></map>
                     </set>                                                               
-                    </set>
                 </li>
                 <li value="2">
                     <set name="SA">
