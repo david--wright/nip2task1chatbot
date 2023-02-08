@@ -241,6 +241,7 @@ SA - <get name="SA"/><br/>
                         <map><name>predecessor</name><map><name>predecessor</name>
                             <get name="SA"/>
                         </map></map>
+                    </set>
                     <set name="SE">
                         <map><name>predecessor</name>
                         <get name="SE"/>
@@ -251,7 +252,6 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map>
                     </set>                                                               
-                    </set>
                 </li>
                 <li value="3"></li>
                 <li value="4">
@@ -259,6 +259,7 @@ SA - <get name="SA"/><br/>
                         <map><name>successor</name><map><name>successor</name>
                             <get name="SA"/>
                         </map></map>
+                    </set>
                     <set name="SE">
                         <map><name>successor</name>
                         <get name="SE"/>
@@ -269,7 +270,6 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map>
                     </set>                                                               
-                    </set>
                 </li>
                 <li value="5">
                     <set name="SA">
@@ -278,6 +278,7 @@ SA - <get name="SA"/><br/>
                             <get name="SA"/>
                         </map></map>
                         </map></map>
+                        </set>
                     <set name="SE">
                         <map><name>successor</name><map><name>successor</name>
                         <get name="SE"/>
@@ -287,8 +288,7 @@ SA - <get name="SA"/><br/>
                         <map><name>successor</name><map><name>successor</name>
                         <get name="CE"/>
                         </map></map>
-                    </set>                                                               
-                    </set>                
+                    </set> 
                 </li>
             </condition>
         </set></think>    
@@ -724,6 +724,7 @@ SA - <get name="SA"/><br/>
                         </map></map>
                         </map></map>
                     </set>
+
                     <set name="SE">
                         <map><name>predecessor</name><map><name>predecessor</name>
                         <get name="SE"/>
@@ -740,6 +741,7 @@ SA - <get name="SA"/><br/>
                         <map><name>predecessor</name><map><name>predecessor</name>
                             <get name="SA"/>
                         </map></map>
+                    </set>
                     <set name="SE">
                         <map><name>predecessor</name>
                         <get name="SE"/>
@@ -750,7 +752,6 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map>
                     </set>                                                               
-                    </set>
                 </li>
                 <li value="3"></li>
                 <li value="4">
@@ -758,6 +759,7 @@ SA - <get name="SA"/><br/>
                         <map><name>successor</name><map><name>successor</name>
                             <get name="SA"/>
                         </map></map>
+                    </set>
                     <set name="SE">
                         <map><name>successor</name>
                         <get name="SE"/>
@@ -768,7 +770,6 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map>
                     </set>                                                               
-                    </set>
                 </li>
                 <li value="5">
                     <set name="SA">
@@ -777,6 +778,7 @@ SA - <get name="SA"/><br/>
                             <get name="SA"/>
                         </map></map>
                         </map></map>
+                    </set>
                     <set name="SE">
                         <map><name>successor</name><map><name>successor</name>
                         <get name="SE"/>
@@ -787,7 +789,7 @@ SA - <get name="SA"/><br/>
                         <get name="CE"/>
                         </map></map>
                     </set>                                                               
-                    </set>                
+
                 </li>
             </condition>
         </set></think>    
