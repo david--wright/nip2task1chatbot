@@ -524,8 +524,510 @@ CE - <get name="CE"/><br/>
 AIML - <get name="AIML"/><br/>
 DS - <get name="DS"/><br/>
 SA - <get name="SA"/><br/>
+ <split/> Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate programming?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that> How would you rate programming </that>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think>
+            <condition var="temp">
+                <li value="1">
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>                       
+                </li>
+                <li value="2">
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                </li>
+                <li value="3"><set name="SE"><get name="SE"/></set></li>
+                <li value="4">
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>successor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name>
+                        <get name="DS"/>
+                        </map>
+                    </set>
+                </li>
+                <li value="5">
+                  <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>                  
+                </li>
+            </condition>
+        </think>    
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
+     <split/> Ok and on the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate Operating Systems Maintainance?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that> How would you rate Operating Systems Maintainance </that>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="os">
+            <condition var="temp">
+                <li value="1">
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="CE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>                       
+                </li>
+                <li value="2">
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>predecessor</name>
+                        <get name="SA"/>
+                        </map>
+                    </set>                   
+                </li>
+                <li value="3"></li>
+                <li value="4">
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="CE"/>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>successor</name>
+                        <get name="SA"/>
+                        </map>
+                    </set>  </li>
+                <li value="5">
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="CE"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>                    
+                </li>
+            </condition>
+        </set></think>    
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
+ <split/> Using the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate interacting with others?</template>
+    </category>
+ 
+     <category>
+        <pattern>*</pattern>
+        <that> How would you rate interacting with others </that>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="personal">
+            <condition var="temp">
+                <li value="1">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="2">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SA"/>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="3"></li>
+                <li value="4">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SA"/>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>successor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>successor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>                                                               
+                    </set>
+                </li>
+                <li value="5">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>                       
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>                                                               
+                    </set>                
+                </li>
+            </condition>
+        </set></think>    
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
+<split/> Great! 2 more questions on your preferences. 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate doing math?</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that> How would you rate doing math </that>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="math">
+            <condition var="temp">
+                <li value="1">
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="DS"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>  
+                </li>
+                <li value="2">
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>  
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>  
+                </li>
+                <li value="3"><get name="math"/></li>
+                <li value="4">
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>  
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>successor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>                  
+                </li>
+                <li value="5">
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="AIML"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="DS"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>  
+                </li>
+            </condition>
+        </set></think>    
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
+<split/> Last question. Using the same scale 1 being please don't let my job require that and 5 being something that completely fascinates you. How would you rate paying attention to details?</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that> How would you rate paying attention to details </that>
+        <template>
+        <think><set var="temp"><star /></set></think>
+        <think><set name="detail">
+            <condition var="temp">
+                <li value="1">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                            <get name="DS"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>                                                            
+                </li>
+                <li value="2">
+                    <set name="SA">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>  
+                    <set name="DS">
+                        <map><name>predecessor</name><map><name>predecessor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>  
+                    <set name="AIML">
+                        <map><name>predecessor</name>
+                        <get name="AIML"/>
+                        </map>
+                    </set>  
+                    <set name="CE">
+                        <map><name>predecessor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>predecessor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>  
+                </li>
+                <li value="3"><get name="detail"/></li>
+                <li value="4">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SA"/>
+                        </map></map>
+                    </set>  
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="DS"/>
+                        </map></map>
+                    </set>  
+                    <set name="AIML">
+                        <map><name>successor</name>
+                        <get name="AIML"/>
+                        </map>
+                    </set>  
+                    <set name="CE">
+                        <map><name>successor</name>
+                        <get name="CE"/>
+                        </map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>successor</name>
+                        <get name="SE"/>
+                        </map>
+                    </set>  
+                </li>
+                <li value="5">
+                    <set name="SA">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="SA"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="DS">
+                        <map><name>successor</name><map><name>successor</name>
+                        <map><name>successor</name><map><name>successor</name>
+                            <get name="DS"/>
+                        </map></map>
+                        </map></map>
+                    </set>
+                    <set name="AIML">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="AIML"/>
+                        </map></map>
+                    </set>
+                    <set name="CE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="CE"/>
+                        </map></map>
+                    </set>  
+                    <set name="SE">
+                        <map><name>successor</name><map><name>successor</name>
+                        <get name="SE"/>
+                        </map></map>
+                    </set>  
+                </li>
+            </condition>
+        </set></think>    
+Current rankings are: SE - <get name="SE"/><br/>
+CE - <get name="CE"/><br/>
+AIML - <get name="AIML"/><br/>
+DS - <get name="DS"/><br/>
+SA - <get name="SA"/><br/>
  <split/> Awesome. Now let's look at your preferences. 1 being please don't let my job require that and 5 being something that completly facinates you. How would you rate programming?</template>
     </category>
+
+
 
     <category>
         <pattern>*</pattern>
