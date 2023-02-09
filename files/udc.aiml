@@ -4,11 +4,11 @@
         <pattern>Hello</pattern>
         <template>
         <think>
-            <set name="SE">50</set>
-            <set name="CE">50</set>
-            <set name="AIML">50</set>
-            <set name="DS">50</set>
-            <set name="SA">50</set>
+            <set name="SE">75</set>
+            <set name="CE">75</set>
+            <set name="AIML">75</set>
+            <set name="DS">75</set>
+            <set name="SA">75</set>
         </think>
         <condition name="debug">
             <li value="true">
