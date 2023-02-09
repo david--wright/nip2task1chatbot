@@ -154,7 +154,7 @@
         <that> How would you rate your skills in Operating Systems Maintainance </that>
         <template>
         <think><set var="temp"><star /></set></think>
-        <think><set name="os">
+        <think>
             <condition var="temp">
                 <li value="1">
                     <set name="CE">
@@ -209,7 +209,7 @@
                     </set>                    
                 </li>
             </condition>
-        </set></think>    
+        </think>    
         <condition name="debug">
             <li value="true">
                 Current rankings are: SE - <get name="SE"/><br/>
@@ -1062,7 +1062,7 @@
 Great here are your results. Higher numbers are a better match for your skills and preferances:<br/>
 Software Engineer - <get name="SE"/><br/>
 Cloud Engineer - <get name="CE"/><br/>
-Artifical Intellegince Engineer - <get name="AIML"/><br/>
+Artificial Intelligence Engineer - <get name="AIML"/><br/>
 Data Scientist - <get name="DS"/><br/>
 Information Security Analyst - <get name="SA"/><br/>
  <split/> Which of these careers would you like more information on?</template>
@@ -1071,10 +1071,46 @@ Information Security Analyst - <get name="SA"/><br/>
     <category>
         <pattern>debug *</pattern>
         <think><set name="debug"><star/></set></think>
-        <template>Debug set to <star/></template>
+        <template>Debug set to <get name=debug></template>
     </category>
-</aiml>
 
+    <category>
+        <pattern>Software Engineer</pattern>
+        <template>A Software Engineer takes the concepts of Engineering and applies them to developing software. 
+        This is a broad role that covers everything from rocket flight systems to web site development. 
+        Pay varies from moderate to high compared to other CS graduate roles.
+        Competition for entry level Software Engineer positions tends to be high </template>
+    </category>
+
+    <category>
+        <pattern>Cloud Engineer</pattern>
+        <template>A Cloud Engineer is responsible for the design, implementation and maintainance of cloud architecture
+        This role requires more knowlage of computing architecture then is typical for other CS careers.
+        Pay tends to start on the lower end for CS graduate roles and many "entry level" Cloud Engineer roles require 2 years of experiance in Cloud Engineering.
+        This means that graduates looking to become cloud engineers will often first need to find another role adjacent to cloud engineering to gain experiance. 
+        Experianced cloud engineers can often transition into Devops or Kubernetes engineering roles which pay in the higher range of CS roles.
+         </template>
+    </category>
+
+    <category>
+        <pattern>Artificial Intelligence Engineer</pattern>
+        <template>Artificial Intelligence Engineers design new applications and systems using machine learning and Artifical Intelligence techniques.
+        This role requires high skill in both programming and math. The high skill requirements are reflected in the pay however with this being one 
+        of the highest paid CS graduate roles.</template>
+    </category>
+
+    <category>
+        <pattern>Data Scientist</pattern>
+        <template>Data Scientists use scripting and programming techniques to gather, analyze and interpret data. 
+        They use advanced mathmatics to solve complex problems. Salaries for Data Scientist vary widely depending on the type of data and the complexity of the problems being solved.
+        </template>
+    </category>
+    <category>
+        <pattern>Information Security Analyst</pattern>
+        <template>Information Security Analysts are responsible for ensuring the security of computing systems 
+        They monitor logs and security tools, define policies and train others on security principals.
+        Pay is in the low to mid range for a CS graduate role but can scale significantly in some roles particularly with a masters degree.</template>
+    </category>
     <category>
         <pattern>*</pattern>
         <template><response index="1" /></template>
